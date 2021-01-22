@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarheader"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/header"
+            android:elevation="5dp"
+            android:fitsSystemWindows="true" />
+
+        <TextView
+            android:id="@+id/descrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:elevation="5dp"
+            android:text="RR Supermarket apps"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/slogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descrip"
+            android:layout_alignStart="@+id/descrip"
+            android:layout_alignLeft="@+id/descrip"
+            android:elevation="5dp"
+            android:text="LOGIN ADMIN"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <FrameLayout
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    app:strokeColor="#808080 "
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtLoginUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp">
+
+                            <EditText
+                                android:id="@+id/email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#E9ECEB "
+                                android:drawableStart="@drawable/admin"
+                                android:hint="Masukkan Email"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                app:layout_anchor="@+id/relativeLayout"
+                                app:layout_anchorGravity="center"
+                                tools:ignore="RtlCompat"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtLoginPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:passwordToggleEnabled="true">
+
+                            <EditText
+                                android:id="@+id/password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#E9ECEB"
+                                android:drawableStart="@drawable/lock"
+                                android:hint="Password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:textSize="16sp"
+                                tools:ignore="RtlCompat"></EditText>
+                        </ com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="65dp"
+                        android:layout_marginEnd="30dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/masuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:text="Masuk"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:theme="@style/Theme.MaterialComponents.Light"
+                            app:backgroundTint="@color/black"
+                            app:cornerRadius="50dp" />
+
+                    </ RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </ RelativeLayout >
+
+</ androidx.coordinatorlayout.widget.CoordinatorLayout>

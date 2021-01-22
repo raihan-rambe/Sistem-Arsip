@@ -1,187 +1,244 @@
-<?xml version="1.0" encoding="utf-8"?>
-   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xmlversion="1.0"encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:paddingBottom="20dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    android:orientation="vertical"
-    tools:context="com.example.sistemarsip.MainActivity">
+    android:background="@drawable/mainbackround"
+    android:orientation="vertical" >
 
-
-    <LinearLayout
-        android:id="@+id/form"
+    <FrameLayout
+        android:id="@+id/Main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="0dp"
-        android:orientation="vertical">
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/header"
+        android:fitSystemWindows="true" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FFFFCC99"
-                android:hint="Email Address"
-                android:inputType="text"
-                android:maxLines="1"
-                android:padding="16dp"
-                android:textColor="#884000"
-                android:textColorHint="#884000"
-                android:textSize="14dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="0dp"
-                android:orientation="vertical"
-                tools:ignore="MissingConstraints">
-
-            </LinearLayout>
-
-            <EditText
-                android:id="@+id/pass"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FFFFCC99"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:padding="16dp"
-                android:textColor="#884000"
-                android:textColorHint="#884000"
-                android:textSize="14dp" />
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical">
-        <TextView
-            android:id="@+id/loginHint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/password"
-            android:background="#ffd33a26"
-            android:padding="1dp"
-            android:text="Login"
-            android:textColor="@color/black"
-            android:visibility="gone" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="register"
-            android:text="Register Here"
-            android:textColor="#FF993300"
-            tools:ignore="OnClick" />
-
-        <TextView
+        <RelativeLayout
+            android:id="@+id/rlAppName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot your Pasword?" />
+            android:layout_gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="monospace"
+                android:text="RR SUPERMARKET"
+                android:textColor= "@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+        </ RelativeLayout >
+
+    </ FrameLayout >
+
+    <LinearLayout
+        android:id="@+id/llCurved"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/mainbackround"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.8"
+        android:orientasi="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp" >
+
+        <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity ="center"
+        android:onClick= "loginadmin"
+        android:orientasi="vertikal"
+        android:padding="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:strokeColor="@color/design_default_color_primary_dark"
+        app:strokeWidth="2dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/admin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgProfile"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="LOGIN ADMIN"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#565656"
+                android:textStyle="bold"/>
+
+        </ RelativeLayout >
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:onClick= "loginpegawai"
+    android:orientasi = "vertikal"
+    android:padding="16dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:strokeColor="@color/design_default_color_primary_dark"
+    app:strokeWidth="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:id="@+id/imgpegawai"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/karyawan" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="reset"
-            android:text="lets Reset it"
-            android:textColor="#FF993300" />
+            android:layout_below="@+id/imgpegawai"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="PEGAWAI"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#565656"
+            android:textStyle="bold" />
 
+    </ RelativeLayout >
 
-    </LinearLayout>
+</ com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:orientation="vertical" />
+    </ LinearLayout >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientasi="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp" >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
         android:layout_weight="1"
-        android:background="#FFFFCC99"
-        android:orientation="horizontal"/>
+        android:gravity="center"
+        android:onClick="marketplace"
+        android:orientasi="vertikal"
+        android:padding="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:strokeColor="@color/design_default_color_primary_dark"
+        app:strokeWidth="2dp" >
 
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#884000"
-                android:gravity="center"
-                android:onClick="Login"
-                android:padding="16dp"
-                android:text="Login"
-                android:textColor="#FFFFCC99"
-                tools:ignore="OnClick" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
 
-            <TextView
-                android:id="@+id/signin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="20dp"
-                android:text="SISTEM ARSIP DATA PEGAWAI"
-                android:textColor="FF993300" />
+    <ImageView
+        android:id="@+id/imgbelanja"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/market"/>
 
-        </LinearLayout>
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgbelanja"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="MARKET"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="#565656"
+        android:textStyle="bold" />
 
+</ RelativeLayout >
 
-    <LinearLayout
+</ com.google.android.material.card.MaterialCardView>
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:onClick="riwayat"
+    android:orientasi="vertikal"
+    android:padding="16dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:strokeColor="@color/design_default_color_primary_dark"
+    app:strokeWidth= "2dp" >
+
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="center" >
+
+<ImageView
+    android:id="@+id/imgHistory"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_centerInParent="true"
+    android:src="@drawable/history" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgHistory"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="HISTORY"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="#565656"
+        android:textStyle="bold" />
+
+</ RelativeLayout >
+
+    </ com.google.android.material.card.MaterialCardView>
+
+    </ LinearLayout >
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/out"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_above="@id/form">
+    android:layout_height="48dp"
+    android:layout_marginLeft="64dp"
+    android:layout_marginRight="64dp"
+    android:layout_marginBottom ="16dp"
+    android:text="Kembali"
+    android:textSize="16sp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:backgroundTint="@color/black"
+    app:cornerRadius="50dp" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/magang"/>
-    </LinearLayout>
-</RelativeLayout>
-
-
-
-
-
+    </ LinearLayout >
