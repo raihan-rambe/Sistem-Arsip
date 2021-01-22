@@ -1,86 +1,70 @@
-package com.example.sistemarsip;
+package com.example.rensposi.activity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.audiofx.DynamicsProcessing;
-import android.nfc.Tag;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+
+import com.example.rensposi.Adapter.AlertDialogManager;
+import com.example.rensposi.R;
+import com.example.rensposi.Session.SessionManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String tag="mainactivity";
-    private Button Login1;
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.v(tag,"ini di OnCreate");
-
-            Toast.makeText(MainActivity.this, "OnCreate", Toast.LENGTH_SHORT).show();
-
-            Login1 = (Button) findViewById(R.id.btnLogin);
-            Login1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(MainActivity.this, "Login", Toast.LENGTH_SHORT).show();
-
-                }
-            }); {
-
-            }
-
-        }
-
-    protected void OnStart() {
-        super.onResume();
-        Log.v(tag,"ini di Onstart");
-
-        Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
-
-    }
-
-         @Override
-        protected void onResume() {
-        super.onResume();
-        Log.v(tag,"ini di onResume");
-
-             Toast.makeText(this, "Resume", Toast.LENGTH_SHORT).show();
-
-        }
-
-         @Override
-         protected void onPause() {
-         super.onPause();
-         Log.v(tag,"ini di onpause");
-
-             Toast.makeText(this, "Pause", Toast.LENGTH_SHORT).show();
-         }
-
-         @Override
-         protected void onStop() {
-        super.onStop();
-        Log.v(tag,"ini di onStop");
-
-             Toast.makeText(this, "Stop" , Toast.LENGTH_SHORT).show();
-        }
+    AlertDialogManager alert = new AlertDialogManager();
+    SessionManager session;
+    Button btnLogout;
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.v(tag,"ini di ondestroy");
-        }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-    public void register(View view) {
+        session = new SessionManager(getApplicationContext());
+        session.checkLogin();
+
+        btnLogout = findViewById(R.id.out);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Anda yakin ingin keluar ?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                                session.logoutUser();
+                            }
+                        })
+                        .setNegativeButton("Tidak", null)
+                        .create();
+                dialog.show();
+            }
+        });
     }
 
-    public void Login(View view) {
+    public void adminMenu(View v) {
+        Intent i = new Intent(this, Loginadmin.class);
+        startActivity(i);
+    }
+
+    public void karyawanMenu(View v) {
+        Intent i = new Intent(this, loginkaryawan.class);
+        startActivity(i);
+    }
+
+    public void marketMenu(View v) {
+        Intent i = new Intent(this, market.class);
+        startActivity(i);
+    }
+
+    public void historyMenu(View v) {
+        Intent i = new Intent(this, history.class);
+        startActivity(i);
     }
 }
-
-
-
