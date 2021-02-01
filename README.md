@@ -28,3 +28,27 @@ Adapun Bagian-bagian  proyek adalah
 <b>Session</b>
 1. SessionManager.java
 
+<b>Drawable</b>
+1. admin.png
+2. baground.png
+3. header.png
+4. history.png
+5. karyawan.png
+6. lock.png
+7. mainbackground.png
+8. market.png
+9. ic_launcher_background.xml
+10. ic_launcher_foreground.xml
+
+<b>layout</b>
+1. activity_main.xml
+2. activity_register.xml
+3. history.xml
+4. liststok.xml
+5. login.xml
+6. loginpegawai.xml
+7. market.xml
+
+
+
+
