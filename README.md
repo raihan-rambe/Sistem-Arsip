@@ -6,7 +6,13 @@ Adapun  file Proyek selama UTS adalah :
 https://drive.google.com/drive/u/1/search?q=rks
 
 Adapun Bagian-bagian  proyek adalah 
-<b>
 
+<b>ACTIVITY</b>
+1. history.java
+2. Login.java
+3. loginkaryawan.java
+4. MainActivity.java
+5. market.java
+6. RegisterActivity.java
 
- 
+<
