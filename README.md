@@ -15,4 +15,16 @@ Adapun Bagian-bagian  proyek adalah
 5. market.java
 6. RegisterActivity.java
 
-<
+<b>Adapter</b>
+1. AlertDialogManager.java
+2. History.java
+
+<b>Database</b>
+1. DatabaseHelper.java
+
+<b>Model</b>
+1. HistoryModel.java
+
+<b>Session</b>
+1. SessionManager.java
+
