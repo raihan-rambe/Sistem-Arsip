@@ -3,7 +3,7 @@ Rancangan sistem arsip akan saya gunakan sebagai proyek tugas akhir yang akan sa
 dengan menampilkan front end tampilan beserta stok nya dan dapat diedit dan dihapus.
 
 Adapun  file Proyek selama UTS adalah :
-https://drive.google.com/drive/u/1/search?q=rks
+https://drive.google.com/drive/folders/1Rdr_fPCR2a1zgs2XW4f6hQC8mbn1Apjy?usp=sharing
 
 Adapun Bagian-bagian  proyek adalah 
 
